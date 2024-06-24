@@ -5,7 +5,11 @@ import * as bcrypt from 'bcryptjs';
 @Injectable()
 export class AuthService {
   private readonly users = [
-    { userId: 1, username: 'test', password: bcrypt.hashSync('password', 10) },
+    {
+      userId: 1,
+      username: 'admin@togov.com',
+      password: bcrypt.hashSync('12345678', 10),
+    },
   ];
 
   constructor(private readonly jwtService: JwtService) {}
